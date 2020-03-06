@@ -8,7 +8,7 @@ def player_index(request):
 
     # raw_players = scrape()
     # for row in raw_players:
-    #     Player.objects.create(name=row[3], rank=row[0])
+    #     Player.objects.create(name=row[3], rank=row[0], age=30, elo=1500)
 
     players = Player.objects.all()
     context = {
@@ -16,4 +16,3 @@ def player_index(request):
     }
     
     return render(request, 'player_index.html', context)
-    #return render(request, 'player_index.html')
